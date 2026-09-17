@@ -1,5 +1,5 @@
 console.log("Hello World")
-
+// function to get computer choice for the game with the help of math.random
 function getComputerChoice(){
     rock = "rock";
     paper = "paper";
@@ -18,16 +18,25 @@ function getComputerChoice(){
 
 console.log(getComputerChoice())
 
+// function to get human choice for the game
 function getHumanChoice(){
-    choice = parseInt(prompt("Enter 0 for rock, 1 for paper and 2 for scissors"));
-    if (choice === 0){
+    choice = prompt("Enter  rock,  paper or scissors");
+    if (choice === rock){
         return rock;
-    } else if (choice === 1){
+    } else if (choice === paper){
         return paper;
-    } else if (choice === 2)
+    } else if (choice === scissors)
         {
         return scissors;
     }
 }
 
 console.log(getHumanChoice());
+
+// Added the variable to store the scores for the players
+humanScore = 0;
+computerScore = 0;
+
+function playRound( humanChoice, computerChoice){
+
+}
