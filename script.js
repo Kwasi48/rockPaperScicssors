@@ -233,7 +233,7 @@ function playRound( humanChoice, computerChoice){
 
 btn_r.addEventListener("click", ()=>{
     playRound(getHumanChoice(rock),getComputerChoice());
-    result.textContent = "humanScore:" + humanScore + " computerScore:" + computerScore;
+    result.textContent = "humanScore:" + humanScore + "     computerScore:" + computerScore;
     if (humanScore === 5){
         final_r.textContent =  "you win!";
         } 
@@ -244,7 +244,7 @@ btn_r.addEventListener("click", ()=>{
 })
 btn_p.addEventListener("click", () => {
     playRound(getHumanChoice(paper), getComputerChoice());
-    result.textContent = "humanScore:" + humanScore + " computerScore:" + computerScore;
+    result.textContent = "humanScore:" + humanScore + "     computerScore:" + computerScore;
      if (humanScore === 5){
         final_r.textContent =  "you win!";
         } 
@@ -255,7 +255,7 @@ btn_p.addEventListener("click", () => {
 })
 btn_s.addEventListener("click", () => {
     playRound(getHumanChoice(scissors), getComputerChoice());
-    result.textContent = "humanScore:" + humanScore + " computerScore:" + computerScore;
+    result.textContent = "humanScore:" + humanScore + "     computerScore:" + computerScore;
      if (humanScore === 5){
         final_r.textContent =  "you win!";
         } 
