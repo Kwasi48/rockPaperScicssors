@@ -227,42 +227,51 @@ function playRound( humanChoice, computerChoice){
     }
 
 
+function resetScore (){
+    humanScore = 0;
+    computerScore = 0;
+}
+function resetWin(){
+    if ( humanScore === 1 || computerScore === 1){
+    final_r.textContent = "";
+    }
+}
 
+function finalScore(){
+    if (humanScore === 5){
+        final_r.textContent =  "you win!";
+        resetScore();
+         
+        } 
+    else if (computerScore === 5) {
+        final_r.textContent = "machine wins!"
+        resetScore();
+       
+        }
+        
+}
 
 
 
 btn_r.addEventListener("click", ()=>{
     playRound(getHumanChoice(rock),getComputerChoice());
     result.textContent = "humanScore:" + humanScore + "     computerScore:" + computerScore;
-    if (humanScore === 5){
-        final_r.textContent =  "you win!";
-        } 
-    else if (computerScore === 5) {
-        final_r.textContent = "machine wins!"
-        }
+    finalScore();
+    resetWin()
+    
 
 })
 btn_p.addEventListener("click", () => {
     playRound(getHumanChoice(paper), getComputerChoice());
     result.textContent = "humanScore:" + humanScore + "     computerScore:" + computerScore;
-     if (humanScore === 5){
-        final_r.textContent =  "you win!";
-        } 
-    else if (computerScore === 5) {
-        final_r.textContent = "machine wins!"
-        }
-
+    finalScore();
+    resetWin()
 })
 btn_s.addEventListener("click", () => {
     playRound(getHumanChoice(scissors), getComputerChoice());
     result.textContent = "humanScore:" + humanScore + "     computerScore:" + computerScore;
-     if (humanScore === 5){
-        final_r.textContent =  "you win!";
-        } 
-    else if (computerScore === 5) {
-        final_r.textContent = "machine wins!"
-        }
-
+    finalScore()
+    resetWin()
 })
 
 master.appendChild(btn_r);
@@ -273,9 +282,9 @@ master.appendChild(btn_s);
 
 
 
-if (humanScore === 5){
-    final_r.textContent =  "you win!";
-} else if (computerScore === 5) {
-    final_r.textContent = "machine wins!"
-}
+// if (humanScore === 5){
+//     final_r.textContent =  "you win!";
+// } else if (computerScore === 5) {
+//     final_r.textContent = "machine wins!"
+// }
 
